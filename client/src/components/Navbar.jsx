@@ -7,12 +7,16 @@ class Navbar extends Component {
 
   render () {
     const patient = this.props.patient
-    return(
-    <nav className="navbar navbar-light bg-light">
-      <a className="navbar-brand" href="/">Patient Portal</a>
-      <h1>Hello, {patient.first_name} </h1>
-      <button className="btn btn-danger navbar-btn"> Logout </button>
-    </nav>)
+    return(<div><nav className="navbar">
+      <a className="navbar-brand" href="/"><h1>Patient Portal</h1></a>
+      <h3>Hello, {patient.first_name} </h3>
+      <button className="btn navbar-btn"> Logout </button>
+
+    </nav>
+    <div className="second-navbar">
+    <span><a href="#" className="nav-link">Link 1</a><a href="#" className="nav-link">Link 2</a><a href="#" className="nav-link">Link 3</a><a href="#" className="nav-link">Link 4</a><a href="#" className="nav-link"> Link 5</a> <a href="#" className="about">About</a><a href="#" className="contact">Contact Us</a></span>
+    </div>
+    </div>)
   }
 }
 
